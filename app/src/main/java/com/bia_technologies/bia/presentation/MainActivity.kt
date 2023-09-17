@@ -1,7 +1,8 @@
-package com.bia_technologies.bia
+package com.bia_technologies.bia.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bia_technologies.bia.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
