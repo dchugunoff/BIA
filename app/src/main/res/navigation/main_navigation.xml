@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/authorisationPhoneNumberFragment">
+
+    <fragment
+        android:id="@+id/authorisationPhoneNumberFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.authorisation_screen.AuthorisationPhoneNumberFragment"
+        android:label="AuthorisationPhoneNumberFragment" >
+        <action
+            android:id="@+id/action_authorisationPhoneNumberFragment_to_authorisationCodeFragment"
+            app:destination="@id/authorisationCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authorisationCodeFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.authorisation_screen.AuthorisationCodeFragment"
+        android:label="AuthorisationCodeFragment" >
+        <action
+            android:id="@+id/action_authorisationCodeFragment_to_taskFragment"
+            app:destination="@id/taskFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.task_screen.TaskFragment"
+        android:label="TaskFragment" />
+</navigation>

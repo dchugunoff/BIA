@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BIA</string>
+    <string name="product_logo">Product Logo</string>
+    <string name="authorisation_phone_title_text">Добро пожаловать в БИА.Помощник логиста</string>
+    <string name="enter_phone_number_string">Введите свой номер для авторизации</string>
+    <string name="next">Продолжить</string>
+    <string name="enter_code_title_string">Введите код из смс</string>
+    <string name="code_sent_string">Код был отправлен на номер телефона \n%s</string>
+    <string name="resend_code_string">Выслать повторный код</string>
+    <string name="back_icon_description">Back icon</string>
+    <string name="code_mask_hint">_ _ _ _ _ _</string>
+    <string name="phone_number_hint">+7 (999) 000 - 00 - 00</string>
 </resources>

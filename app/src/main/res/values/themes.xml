@@ -1,9 +1,15 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.BIA" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/dark</item>
     </style>
 
     <style name="Theme.BIA" parent="Base.Theme.BIA" />
+
+    <style name="Widget.AppTheme.MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/button_state_colors</item>
+        <item name="android:textColor">@color/button_text_state_colors</item>
+    </style>
 </resources>
