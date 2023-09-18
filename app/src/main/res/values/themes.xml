@@ -12,4 +12,15 @@
         <item name="backgroundTint">@color/button_state_colors</item>
         <item name="android:textColor">@color/button_text_state_colors</item>
     </style>
+    
+    <style name="BottomNavMenuTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/stolzl_regular</item>
+    </style>
+    
+    <style name="FragmentTitleTextStyle">
+        <item name="android:fontFamily">@font/stolzl_regular</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
 </resources>

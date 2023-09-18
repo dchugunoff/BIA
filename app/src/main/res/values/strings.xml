@@ -10,4 +10,12 @@
     <string name="back_icon_description">Back icon</string>
     <string name="code_mask_hint">_ _ _ _ _ _</string>
     <string name="phone_number_hint">+7 (999) 000 - 00 - 00</string>
+    <string name="menu_task_title">Задания</string>
+    <string name="menu_graphics_title">Графики</string>
+    <string name="menu_chat_title">Чат</string>
+    <string name="menu_profile_title">Профиль</string>
+    <string name="current_task_title">Текущее задание</string>
+    <string name="task_details_title">Детали заказа</string>
+    <string name="detail_payment_string">Параметры по оплате</string>
+    <string name="task_fragment_title">Задания</string>
 </resources>
