@@ -61,6 +61,8 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.48")
     //Mask
     implementation("com.github.santalu:maskara:1.0.0")
+    //Preferences
+    implementation("androidx.preference:preference-ktx:1.2.1")
 
 
     implementation("androidx.core:core-ktx:1.12.0")

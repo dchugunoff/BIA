@@ -11,6 +11,11 @@
         <action
             android:id="@+id/action_authorisationPhoneNumberFragment_to_authorisationCodeFragment"
             app:destination="@id/authorisationCodeFragment" />
+        <action
+            android:id="@+id/action_authorisationPhoneNumberFragment_to_taskFragment"
+            app:destination="@id/taskFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/authorisationCodeFragment"

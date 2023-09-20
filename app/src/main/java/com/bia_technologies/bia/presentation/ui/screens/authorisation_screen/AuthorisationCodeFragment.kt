@@ -6,12 +6,15 @@ import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.edit
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.preference.PreferenceManager
 import com.bia_technologies.bia.R
+import com.bia_technologies.bia.app.PHONE_NUMBER_SHARED_PREF
 import com.bia_technologies.bia.databinding.FragmentAuthorisationCodeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,6 +28,7 @@ class AuthorisationCodeFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("FragmentAuthorisationCodeBinding == null")
 
     private val args: AuthorisationCodeFragmentArgs by navArgs()
+    private lateinit var phoneNumber: String
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -59,6 +63,16 @@ class AuthorisationCodeFragment : Fragment() {
         }
         binding.nextButton.setOnClickListener {
             findNavController().navigate(R.id.action_authorisationCodeFragment_to_taskFragment)
+            addPhoneNumber()
+        }
+    }
+
+
+    private fun addPhoneNumber() {
+        phoneNumber = args.phoneNumber
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        sharedPreferences.edit {
+            putString(PHONE_NUMBER_SHARED_PREF, phoneNumber)
         }
     }
 
