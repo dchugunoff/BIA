@@ -28,5 +28,46 @@
     <fragment
         android:id="@+id/taskFragment"
         android:name="com.bia_technologies.bia.presentation.ui.screens.task_screen.TaskFragment"
-        android:label="TaskFragment" />
+        android:label="TaskFragment" >
+        <action
+            android:id="@+id/action_taskFragment_to_detailTaskFragment"
+            app:destination="@id/detailTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTaskFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.task_screen.DetailTaskFragment"
+        android:label="DetailTaskFragment">
+        <argument
+            android:name="task"
+            app:argType="com.bia_technologies.bia.data.models.TaskModelDto" />
+        <action
+            android:id="@+id/action_detailTaskFragment_to_incidentsFragment"
+            app:destination="@id/incidentsFragment" />
+        <action
+            android:id="@+id/action_detailTaskFragment_to_attachDocumentsFragment"
+            app:destination="@id/attachDocumentsFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.chat_fragment.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/incidentsFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.task_screen.IncidentsFragment"
+        android:label="IncidentsFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.profile_fragment.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.schedule_fragment.ScheduleFragment"
+        android:label="ScheduleFragment" />
+    <fragment
+        android:id="@+id/attachDocumentsFragment"
+        android:name="com.bia_technologies.bia.presentation.ui.screens.task_screen.AttachDocumentsFragment"
+        android:label="AttachDocumentsFragment" />
 </navigation>

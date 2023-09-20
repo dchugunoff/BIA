@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/dark</item>
+        <item name="android:windowBackground">@color/light_gray</item>
     </style>
 
     <style name="Theme.BIA" parent="Base.Theme.BIA" />
@@ -11,6 +12,12 @@
     <style name="Widget.AppTheme.MaterialButton" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/button_state_colors</item>
         <item name="android:textColor">@color/button_text_state_colors</item>
+    </style>
+
+    <style name="OderDetailButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/order_button_state</item>
+        <item name="android:textColor">@color/order_button_text</item>
+        <item name="iconTint">@color/order_button_text</item>
     </style>
     
     <style name="BottomNavMenuTextStyle">
@@ -22,5 +29,20 @@
         <item name="android:fontFamily">@font/stolzl_regular</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/dark_gray</item>
+    </style>
+    
+    <style name="OrderWhiteButtonsStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/stolzl_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="iconTint">@color/dark_gray</item>
+        <item name="iconGravity">end</item>
+        <item name="iconSize">10dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="cornerRadius">16dp</item>
     </style>
 </resources>

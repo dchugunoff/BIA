@@ -18,4 +18,22 @@
     <string name="task_details_title">Детали заказа</string>
     <string name="detail_payment_string">Параметры по оплате</string>
     <string name="task_fragment_title">Задания</string>
+    <string name="check_details_button">Посмотреть детали</string>
+    <string name="task_detail_string">Детали задания</string>
+    <string name="type">Тип груза</string>
+    <string name="city_title_string">Город исполнения</string>
+    <string name="order_date_string">Дата заказа</string>
+    <string name="order_time">Время прибытия</string>
+    <string name="start_order_point_title">Начальная точка маршрута</string>
+    <string name="end_order_point_title">Конечная точка маршрута</string>
+    <string name="body_type_string">Тип кузова</string>
+    <string name="contacts">Контакты</string>
+    <string name="client_rules_string">Правила клиента</string>
+    <string name="download_string">Скачать</string>
+    <string name="incident_string">Инцидент</string>
+    <string name="error_string">Ошибка</string>
+    <string name="attach_documents_button">Прикрепить документы</string>
+    <string name="finish_order_string">Завершить заказ</string>
+    <string name="refuse_order_string">Отказаться от задания</string>
+    <string name="rules_for_finish_order_string">Для завершения заказа необходимо прикрепить документы</string>
 </resources>

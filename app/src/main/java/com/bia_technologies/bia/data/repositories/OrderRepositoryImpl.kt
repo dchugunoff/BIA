@@ -10,8 +10,9 @@ class OrderRepositoryImpl @Inject constructor(
     private val mapper: OrderMapper
 ) : OrderRepository {
 
-    private val taskDtoList = listOf(
+    private val taskList = listOf(
         TaskModelDto(
+            id = 1,
             currentOrder = true,
             completedOrder = false,
             type = "Мебель",
@@ -27,6 +28,7 @@ class OrderRepositoryImpl @Inject constructor(
             contactFullName = "Иванов Владимир Иосифович",
         ),
         TaskModelDto(
+            id = 2,
             currentOrder = false,
             completedOrder = false,
             type = "Мебель",
@@ -42,6 +44,7 @@ class OrderRepositoryImpl @Inject constructor(
             contactFullName = "Петров Петр Петрович",
         ),
         TaskModelDto(
+            id = 3,
             currentOrder = false,
             completedOrder = true,
             type = "Мебель",
@@ -60,7 +63,12 @@ class OrderRepositoryImpl @Inject constructor(
     )
 
     override suspend fun getTaskList(): List<TaskModel> {
-        return taskDtoList.map { mapper.mapDtoToEntity(it) }
+        return taskList.map { mapper.mapDtoToEntity(it) }
     }
+
+    override suspend fun getTaskById(id: Int): TaskModel? {
+        return taskList.find { it.id == id }?.let { mapper.mapDtoToEntity(it) }
+    }
+
 
 }

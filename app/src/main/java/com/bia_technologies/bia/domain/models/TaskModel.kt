@@ -3,6 +3,7 @@ package com.bia_technologies.bia.domain.models
 import javax.inject.Inject
 
 data class TaskModel @Inject constructor(
+    val id: Int,
     val currentOrder: Boolean,
     val completedOrder: Boolean,
     val type: String,

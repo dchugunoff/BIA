@@ -1,8 +1,12 @@
 package com.bia_technologies.bia.data.models
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import javax.inject.Inject
 
+@Parcelize
 data class TaskModelDto @Inject constructor(
+    val id: Int,
     val currentOrder: Boolean,
     val completedOrder: Boolean,
     val type: String,
@@ -16,4 +20,4 @@ data class TaskModelDto @Inject constructor(
     val paymentOptions: String,
     val contactPhone: String,
     val contactFullName: String
-)
+): Parcelable

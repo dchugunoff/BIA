@@ -20,5 +20,25 @@ class OrderMapper @Inject constructor() {
         paymentOptions = orderDto.paymentOptions,
         contactPhone = orderDto.contactPhone,
         contactFullName = orderDto.contactFullName,
+        id = orderDto.id
     )
+
+    fun convertTaskModelToDto(taskModel: TaskModel): TaskModelDto {
+        return TaskModelDto(
+            currentOrder = taskModel.currentOrder,
+            completedOrder = taskModel.completedOrder,
+            type = taskModel.type,
+            city = taskModel.city,
+            orderDate = taskModel.orderDate,
+            arrivalTime = taskModel.arrivalTime,
+            startingPoint = taskModel.startingPoint,
+            endPoint = taskModel.endPoint,
+            carBodyType = taskModel.carBodyType,
+            orderDetails = taskModel.orderDetails,
+            paymentOptions = taskModel.paymentOptions,
+            contactPhone = taskModel.contactPhone,
+            contactFullName = taskModel.contactFullName,
+            id = taskModel.id
+        )
+    }
 }

@@ -59,7 +59,7 @@
         app:mask="+7 (###) ### - ## - ##" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/next_button"
+        android:id="@+id/nextButton"
         style="@style/Widget.AppTheme.MaterialButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

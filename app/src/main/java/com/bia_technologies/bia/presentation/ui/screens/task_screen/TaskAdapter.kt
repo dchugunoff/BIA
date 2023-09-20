@@ -3,9 +3,11 @@ package com.bia_technologies.bia.presentation.ui.screens.task_screen
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bia_technologies.bia.data.mappers.OrderMapper
 import com.bia_technologies.bia.databinding.OrderCardBinding
 import com.bia_technologies.bia.domain.models.TaskModel
 import javax.inject.Inject
@@ -30,6 +32,11 @@ class TaskAdapter @Inject constructor() :
                     View.VISIBLE
                 } else {
                     View.GONE
+                }
+                checkDetailsButton.setOnClickListener {
+                    val taskModelDto = OrderMapper().convertTaskModelToDto(taskModel)
+                    val action = TaskFragmentDirections.actionTaskFragmentToDetailTaskFragment(taskModelDto, id = taskModel.id)
+                    itemView.findNavController().navigate(action)
                 }
             }
         }

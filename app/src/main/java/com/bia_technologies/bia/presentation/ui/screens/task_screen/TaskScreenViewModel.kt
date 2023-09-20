@@ -9,6 +9,8 @@ import com.bia_technologies.bia.domain.repositories.OrderRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.coroutines.resume
+import kotlin.coroutines.suspendCoroutine
 
 @HiltViewModel
 class TaskScreenViewModel @Inject constructor(
@@ -26,5 +28,14 @@ class TaskScreenViewModel @Inject constructor(
 
     private suspend fun getTaskList() {
         _taskList.value = orderRepository.getTaskList()
+    }
+
+    suspend fun getTaskById(id: Int): TaskModel? {
+        return suspendCoroutine { continuation ->
+            viewModelScope.launch {
+                val task = orderRepository.getTaskById(id)
+                continuation.resume(task)
+            }
+        }
     }
 }

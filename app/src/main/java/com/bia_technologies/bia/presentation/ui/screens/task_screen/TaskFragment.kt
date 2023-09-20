@@ -1,6 +1,7 @@
 package com.bia_technologies.bia.presentation.ui.screens.task_screen
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +35,7 @@ class TaskFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindAdapter()
+        Log.d("ViewModel", "$viewModel")
     }
 
 

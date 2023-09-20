@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/rounded_task_card"
+    android:background="@drawable/rounded_constraint_layout"
     android:paddingBottom="20dp"
     android:layout_marginBottom="8dp">
 
@@ -79,7 +79,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_task_card"
+        android:background="@drawable/rounded_constraint_layout"
         android:backgroundTint="@color/light_gray">
         
         <ImageView
@@ -173,12 +173,12 @@
         android:textSize="14sp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/next_button"
+        android:id="@+id/check_details_button"
         style="@style/Widget.AppTheme.MaterialButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/stolzl_regular"
-        android:text="@string/next"
+        android:text="@string/check_details_button"
         android:textAllCaps="false"
         android:textSize="14sp"
         app:cornerRadius="18dp"
