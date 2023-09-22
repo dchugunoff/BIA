@@ -36,4 +36,13 @@
     <string name="finish_order_string">Завершить заказ</string>
     <string name="refuse_order_string">Отказаться от задания</string>
     <string name="rules_for_finish_order_string">Для завершения заказа необходимо прикрепить документы</string>
+    <string name="documents_string">Документы</string>
+    <string name="for_finish_order_title">Для завершения заказа необходимо прикрепить документы</string>
+    <string name="add_photo">Добавить фото</string>
+    <string name="read_permission_denied_string">Для выполнения необходимо разрешить доступ к хранилищу</string>
+    <string name="choose_incident_string">Выберите что произошло</string>
+    <string name="problem_address">Проблема на адресате</string>
+    <string name="problem_way">Проблема в пути</string>
+    <string name="problem_loading">Проблема на загрузке</string>
+    <string name="save_string">Сохранить</string>
 </resources>

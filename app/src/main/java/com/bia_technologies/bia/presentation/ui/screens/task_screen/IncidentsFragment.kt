@@ -27,8 +27,19 @@ class IncidentsFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        listenerChooseIncident()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    private fun listenerChooseIncident() {
+        binding.incidentChooseGroup.setOnCheckedChangeListener { _, checkedId ->
+            binding.saveButton.isEnabled = checkedId != -1
+        }
     }
 }
