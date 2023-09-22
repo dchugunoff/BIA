@@ -1,437 +1,444 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/task_detail_string"
+        app:titleTextAppearance="@style/FragmentTitleTextStyle" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="@string/task_detail_string"
-            app:titleTextAppearance="@style/FragmentTitleTextStyle" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/order_detail_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_constraint_layout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/type_title"
-                android:layout_width="wrap_content"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/order_detail_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/type"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_constraint_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/type_title"
-                app:layout_constraintTop_toBottomOf="@id/type_title"
-                tools:text="Мебель" />
+                <TextView
+                    android:id="@+id/type_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/type"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/city_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/city_title_string"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/type"
-                app:layout_constraintTop_toBottomOf="@id/type" />
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/type_title"
+                    app:layout_constraintTop_toBottomOf="@id/type_title"
+                    tools:text="Мебель" />
 
-            <TextView
-                android:id="@+id/city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/city_title"
-                app:layout_constraintTop_toBottomOf="@id/city_title"
-                tools:text="Москва" />
+                <TextView
+                    android:id="@+id/city_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/city_title_string"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/type"
+                    app:layout_constraintTop_toBottomOf="@id/type" />
 
-            <TextView
-                android:id="@+id/order_date_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/order_date_string"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/city"
-                app:layout_constraintTop_toBottomOf="@id/city" />
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/city_title"
+                    app:layout_constraintTop_toBottomOf="@id/city_title"
+                    tools:text="Москва" />
 
-            <TextView
-                android:id="@+id/order_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/order_date_title"
-                app:layout_constraintTop_toBottomOf="@id/order_date_title"
-                tools:text="18.04.2023" />
+                <TextView
+                    android:id="@+id/order_date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/order_date_string"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/city"
+                    app:layout_constraintTop_toBottomOf="@id/city" />
 
-            <TextView
-                android:id="@+id/time_order_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/order_time"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/order_date"
-                app:layout_constraintTop_toBottomOf="@id/order_date" />
+                <TextView
+                    android:id="@+id/order_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/order_date_title"
+                    app:layout_constraintTop_toBottomOf="@id/order_date_title"
+                    tools:text="18.04.2023" />
 
-            <TextView
-                android:id="@+id/time_order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/time_order_title"
-                app:layout_constraintTop_toBottomOf="@id/time_order_title"
-                tools:text="12:00" />
+                <TextView
+                    android:id="@+id/time_order_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/order_time"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/order_date"
+                    app:layout_constraintTop_toBottomOf="@id/order_date" />
 
-            <TextView
-                android:id="@+id/start_point_order_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/start_order_point_title"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/time_order"
-                app:layout_constraintTop_toBottomOf="@id/time_order" />
+                <TextView
+                    android:id="@+id/time_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/time_order_title"
+                    app:layout_constraintTop_toBottomOf="@id/time_order_title"
+                    tools:text="12:00" />
 
-            <TextView
-                android:id="@+id/start_order_point"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_regular"
-                android:textColor="@color/blue_link"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/start_point_order_title"
-                app:layout_constraintTop_toBottomOf="@id/start_point_order_title"
-                tools:text="Склад 51, Ул. Пушкина 124Б" />
+                <TextView
+                    android:id="@+id/start_point_order_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/start_order_point_title"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/time_order"
+                    app:layout_constraintTop_toBottomOf="@id/time_order" />
 
-            <TextView
-                android:id="@+id/end_point_order_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/end_order_point_title"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/start_order_point"
-                app:layout_constraintTop_toBottomOf="@id/start_order_point" />
+                <TextView
+                    android:id="@+id/start_order_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_regular"
+                    android:textColor="@color/blue_link"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/start_point_order_title"
+                    app:layout_constraintTop_toBottomOf="@id/start_point_order_title"
+                    tools:text="Склад 51, Ул. Пушкина 124Б" />
 
-            <TextView
-                android:id="@+id/end_order_point"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_regular"
-                android:textColor="@color/blue_link"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/end_point_order_title"
-                app:layout_constraintTop_toBottomOf="@id/end_point_order_title"
-                tools:text="Склад 38, Ул. Розенбаума 89" />
+                <TextView
+                    android:id="@+id/end_point_order_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/end_order_point_title"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/start_order_point"
+                    app:layout_constraintTop_toBottomOf="@id/start_order_point" />
 
-            <TextView
-                android:id="@+id/type_body_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/body_type_string"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/end_order_point"
-                app:layout_constraintTop_toBottomOf="@id/end_order_point" />
+                <TextView
+                    android:id="@+id/end_order_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_regular"
+                    android:textColor="@color/blue_link"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/end_point_order_title"
+                    app:layout_constraintTop_toBottomOf="@id/end_point_order_title"
+                    tools:text="Склад 38, Ул. Розенбаума 89" />
 
-            <TextView
-                android:id="@+id/type_body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/type_body_title"
-                app:layout_constraintTop_toBottomOf="@id/type_body_title"
-                tools:text="Тентованный" />
+                <TextView
+                    android:id="@+id/type_body_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/body_type_string"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/end_order_point"
+                    app:layout_constraintTop_toBottomOf="@id/end_order_point" />
 
-            <TextView
-                android:id="@+id/order_detail_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/task_details_title"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/type_body"
-                app:layout_constraintTop_toBottomOf="@id/type_body" />
+                <TextView
+                    android:id="@+id/type_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/type_body_title"
+                    app:layout_constraintTop_toBottomOf="@id/type_body_title"
+                    tools:text="Тентованный" />
 
-            <TextView
-                android:id="@+id/order_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/order_detail_title"
-                app:layout_constraintTop_toBottomOf="@id/order_detail_title"
-                tools:text="Прописанные детали заказа" />
+                <TextView
+                    android:id="@+id/order_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/task_details_title"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/type_body"
+                    app:layout_constraintTop_toBottomOf="@id/type_body" />
 
-            <TextView
-                android:id="@+id/payment_detail_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/detail_payment_string"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/order_detail"
-                app:layout_constraintTop_toBottomOf="@id/order_detail" />
+                <TextView
+                    android:id="@+id/order_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/order_detail_title"
+                    app:layout_constraintTop_toBottomOf="@id/order_detail_title"
+                    tools:text="Прописанные детали заказа" />
 
-            <TextView
-                android:id="@+id/payment_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/payment_detail_title"
-                app:layout_constraintTop_toBottomOf="@id/payment_detail_title"
-                tools:text="Прописанные параметры по оплате" />
+                <TextView
+                    android:id="@+id/payment_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/detail_payment_string"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/order_detail"
+                    app:layout_constraintTop_toBottomOf="@id/order_detail" />
 
-            <TextView
-                android:id="@+id/contacts_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/stolzl_book"
-                android:text="@string/contacts"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@id/payment_detail"
-                app:layout_constraintTop_toBottomOf="@id/payment_detail" />
+                <TextView
+                    android:id="@+id/payment_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/payment_detail_title"
+                    app:layout_constraintTop_toBottomOf="@id/payment_detail_title"
+                    tools:text="Прописанные параметры по оплате" />
 
-            <TextView
-                android:id="@+id/contact_phone_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:textColor="@color/blue_link"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/contacts_title"
-                app:layout_constraintTop_toBottomOf="@id/contacts_title"
-                tools:text="+7 800 896 52 63" />
+                <TextView
+                    android:id="@+id/contacts_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:text="@string/contacts"
+                    android:textColor="@color/bia_gray_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/payment_detail"
+                    app:layout_constraintTop_toBottomOf="@id/payment_detail" />
 
-            <TextView
-                android:id="@+id/contact_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/stolzl_book"
-                android:paddingBottom="14dp"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/contact_phone_number"
-                app:layout_constraintTop_toBottomOf="@id/contact_phone_number"
-                tools:text="Иванов Владимир Иосифович" />
+                <TextView
+                    android:id="@+id/contact_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:textColor="@color/blue_link"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/contacts_title"
+                    app:layout_constraintTop_toBottomOf="@id/contacts_title"
+                    tools:text="+7 800 896 52 63" />
+
+                <TextView
+                    android:id="@+id/contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/stolzl_book"
+                    android:paddingBottom="14dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/contact_phone_number"
+                    app:layout_constraintTop_toBottomOf="@id/contact_phone_number"
+                    tools:text="Иванов Владимир Иосифович" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/client_rules_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/rounded_constraint_layout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/order_detail_layout">
-
-            <TextView
-                android:id="@+id/client_rules_title"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/client_rules_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/stolzl_regular"
-                android:text="@string/client_rules_string"
-                android:textColor="@color/dark_gray"
-                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_constraint_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/order_detail_layout">
+
+                <TextView
+                    android:id="@+id/client_rules_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/stolzl_regular"
+                    android:text="@string/client_rules_string"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/download_button"
+                    style="@style/OderDetailButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="@string/download_string"
+                    android:textAllCaps="false"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/download_icon"
+                    app:iconGravity="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/client_rules_title"
+                    app:layout_goneMarginBottom="20dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/download_button"
+                android:id="@+id/incident_button"
+                style="@style/OrderWhiteButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/incident_string"
+                app:icon="@drawable/order_next_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/client_rules_layout" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/error_button"
+                style="@style/OrderWhiteButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/error_string"
+                android:textColor="@color/dark_gray"
+                app:icon="@drawable/order_next_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/incident_button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/attach_documents_button"
+                style="@style/OrderWhiteButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/attach_documents_button"
+                android:textColor="@color/dark_gray"
+                app:icon="@drawable/order_next_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/error_button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finish_order_button"
                 style="@style/OderDetailButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:enabled="false"
                 android:gravity="center"
-                android:text="@string/download_string"
+                android:text="@string/finish_order_string"
                 android:textAllCaps="false"
                 app:cornerRadius="18dp"
-                app:icon="@drawable/download_icon"
                 app:iconGravity="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/attach_documents_button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/refuse_order_button"
+                style="@style/OderDetailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="@string/refuse_order_string"
+                android:textAllCaps="false"
+                app:cornerRadius="18dp"
+                app:iconGravity="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/finish_order_button" />
+
+            <TextView
+                android:id="@+id/rules_for_finish_order_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/stolzl_book"
+                android:text="@string/rules_for_finish_order_string"
+                android:textColor="@color/middle_gray"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/client_rules_title"
-                app:layout_goneMarginBottom="20dp" />
+                app:layout_constraintTop_toBottomOf="@id/refuse_order_button" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/incident_button"
-            style="@style/OrderWhiteButtonsStyle"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/incident_string"
-            app:icon="@drawable/order_next_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/client_rules_layout"/>
+    </ScrollView>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/error_button"
-            style="@style/OrderWhiteButtonsStyle"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/error_string"
-            android:textColor="@color/dark_gray"
-            app:icon="@drawable/order_next_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/incident_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/attach_documents_button"
-            style="@style/OrderWhiteButtonsStyle"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/attach_documents_button"
-            android:textColor="@color/dark_gray"
-            app:icon="@drawable/order_next_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/error_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/finish_order_button"
-            style="@style/OderDetailButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center"
-            android:text="@string/finish_order_string"
-            android:textAllCaps="false"
-            app:cornerRadius="18dp"
-            app:iconGravity="textStart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/attach_documents_button"
-            android:enabled="false"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/refuse_order_button"
-            style="@style/OderDetailButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center"
-            android:text="@string/refuse_order_string"
-            android:textAllCaps="false"
-            app:cornerRadius="18dp"
-            app:iconGravity="textStart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/finish_order_button"
-            android:enabled="true"/>
-
-        <TextView
-            android:id="@+id/rules_for_finish_order_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/refuse_order_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="@string/rules_for_finish_order_string"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/stolzl_book"
-            android:textSize="14sp"
-            android:textColor="@color/middle_gray"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+</LinearLayout>

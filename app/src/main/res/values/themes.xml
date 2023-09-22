@@ -45,4 +45,16 @@
         <item name="android:layout_marginEnd">16dp</item>
         <item name="cornerRadius">16dp</item>
     </style>
+
+    <style name="ProfileTitleStyle">
+        <item name="android:fontFamily">@font/stolzl_book</item>
+        <item name="android:textSize">12sp</item>
+        <item name="color">@color/bia_gray_color</item>
+    </style>
+
+    <style name="ProfileTextStyle">
+        <item name="android:fontFamily">@font/stolzl_book</item>
+        <item name="android:textSize">14sp</item>
+        <item name="color">@color/dark_gray</item>
+    </style>
 </resources>

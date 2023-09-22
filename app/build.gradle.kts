@@ -63,6 +63,8 @@ dependencies {
     implementation("com.github.santalu:maskara:1.0.0")
     //Preferences
     implementation("androidx.preference:preference-ktx:1.2.1")
+    //Coil
+    implementation("io.coil-kt:coil:2.4.0")
 
 
     implementation("androidx.core:core-ktx:1.12.0")

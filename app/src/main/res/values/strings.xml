@@ -45,4 +45,13 @@
     <string name="problem_way">Проблема в пути</string>
     <string name="problem_loading">Проблема на загрузке</string>
     <string name="save_string">Сохранить</string>
+    <string name="profile_title_string">Профиль</string>
+    <string name="personnel_number_string">Табельный №</string>
+    <string name="phone_number_string">Номер телефона</string>
+    <string name="citizenship_string">Гражданство</string>
+    <string name="car_string">Машина</string>
+    <string name="car_number_string">Номера</string>
+    <string name="sick_leave_string">Больничный лист</string>
+    <string name="notifications_string">Оповещения</string>
+    <string name="exit_string">Выйти</string>
 </resources>
