@@ -54,4 +54,6 @@
     <string name="sick_leave_string">Больничный лист</string>
     <string name="notifications_string">Оповещения</string>
     <string name="exit_string">Выйти</string>
+    <string name="work_finished_string">Работа выполнена</string>
+    <string name="work_finished_title">Задание было успешно выполнено</string>
 </resources>

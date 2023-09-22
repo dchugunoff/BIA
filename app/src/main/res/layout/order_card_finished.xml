@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_constraint_layout"
+    android:paddingBottom="20dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/current_task_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/task_type"
+        app:layout_constraintBottom_toBottomOf="@id/task_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:text="@string/current_task_title"
+        android:textColor="@color/middle_gray"
+        android:fontFamily="@font/stolzl_book"/>
+
+    <TextView
+        android:id="@+id/order_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/stolzl_book"
+        android:textColor="@color/dark_gray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/task_type"
+        app:layout_constraintTop_toBottomOf="@id/task_type"
+        tools:text="11.08.2023" />
+
+    <TextView
+        android:id="@+id/task_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/stolzl_medium"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Мебель" />
+
+    <ImageView
+        android:id="@+id/ellipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/order_date_title"
+        app:layout_constraintTop_toTopOf="@id/order_date_title"
+        app:layout_constraintBottom_toBottomOf="@id/order_date_title"
+        android:src="@drawable/ellipse"
+        android:layout_marginStart="4dp"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/order_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/order_date_title"
+        app:layout_constraintStart_toEndOf="@id/ellipse"
+        app:layout_constraintBottom_toBottomOf="@id/order_date_title"
+        android:layout_marginStart="4dp"
+        tools:text="12:00"
+        android:fontFamily="@font/stolzl_book"
+        android:textColor="@color/dark_gray"
+        android:textSize="14sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/points_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/order_date_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_constraint_layout"
+        android:backgroundTint="@color/light_gray">
+
+        <ImageView
+            android:id="@+id/points_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/start_point_textview"
+            app:layout_constraintBottom_toBottomOf="@id/end_point_textview"
+            android:src="@drawable/pointsicon"
+            android:layout_marginStart="8dp"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/start_point_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/points_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Склад 51, Ул. Пушкина 124Б"
+            android:fontFamily="@font/stolzl_book"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/end_point_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/start_point_textview"
+            app:layout_constraintTop_toBottomOf="@id/start_point_textview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Склад 38, Ул. Розенбаума 89"
+            android:fontFamily="@font/stolzl_book"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/order_finished_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/points_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_constraint_layout"
+        android:backgroundTint="@color/light_gray">
+
+        <TextView
+            android:id="@+id/work_finished_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="16dp"
+            android:text="@string/work_finished_string"
+            android:fontFamily="@font/stolzl_regular"
+            android:textSize="14sp"
+            android:textColor="@color/green_status"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/work_finished_title"
+            app:layout_constraintStart_toStartOf="@id/work_finished_title"
+            android:text="@string/work_finished_title"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/stolzl_book"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
