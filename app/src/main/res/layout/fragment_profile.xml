@@ -42,7 +42,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/avatar" />
 
                 <TextView
                     android:id="@+id/user_name"
@@ -206,7 +207,7 @@
                 app:icon="@drawable/order_next_icon"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/exit_account_button"
+                android:id="@+id/logout"
                 style="@style/OrderWhiteButtonsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"

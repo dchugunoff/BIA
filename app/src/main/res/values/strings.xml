@@ -56,4 +56,6 @@
     <string name="exit_string">Выйти</string>
     <string name="work_finished_string">Работа выполнена</string>
     <string name="work_finished_title">Задание было успешно выполнено</string>
+    <string name="schedule_string">График смен</string>
+    <string name="avatar">avatar</string>
 </resources>

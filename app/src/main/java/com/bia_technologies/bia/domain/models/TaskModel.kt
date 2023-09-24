@@ -16,5 +16,5 @@ data class TaskModel @Inject constructor(
     val orderDetails: String,
     val paymentOptions: String,
     val contactPhone: String,
-    val contactFullName: String
+    val contactFullName: String,
 )

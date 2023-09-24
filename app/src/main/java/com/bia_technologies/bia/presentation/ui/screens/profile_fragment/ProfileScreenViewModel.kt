@@ -1,6 +1,7 @@
 package com.bia_technologies.bia.presentation.ui.screens.profile_fragment
 
 import android.content.SharedPreferences
+import androidx.core.content.edit
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,11 +23,17 @@ class ProfileScreenViewModel @Inject constructor(
         return sharedPreferences.getString(PHONE_NUMBER_SHARED_PREF, "") ?: ""
     }
 
+    fun logout() {
+        sharedPreferences.edit {
+            remove(PHONE_NUMBER_SHARED_PREF)
+        }
+    }
+
     init {
         _user.value = UserModel(
             name = "Петров Иван Алексеевич",
             phoneNumber = getUserPhoneNum(),
-            userPhoto = R.drawable.ava_tools,
+            userPhoto = R.drawable.ava,
             profession = "Водитель",
             personnelNumber = 1111,
             citizenship = "РФ",

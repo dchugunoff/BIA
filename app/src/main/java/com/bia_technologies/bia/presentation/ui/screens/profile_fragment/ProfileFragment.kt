@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import coil.load
 import coil.transform.CircleCropTransformation
+import com.bia_technologies.bia.R
 import com.bia_technologies.bia.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,6 +34,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindProfile()
+
     }
 
     private fun bindProfile() {
@@ -48,6 +51,10 @@ class ProfileFragment : Fragment() {
                 carNumber.text = it.carRegistrationNumber
                 typeCar.text = it.typeCar
             }
+        }
+        binding.logout.setOnClickListener {
+            viewModel.logout()
+            findNavController().navigate(R.id.action_profileFragment_to_authorisationPhoneNumberFragment)
         }
     }
 

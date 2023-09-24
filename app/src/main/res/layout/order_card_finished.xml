@@ -8,17 +8,6 @@
     android:paddingBottom="20dp"
     android:layout_marginBottom="8dp">
 
-    <TextView
-        android:id="@+id/current_task_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/task_type"
-        app:layout_constraintBottom_toBottomOf="@id/task_type"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp"
-        android:text="@string/current_task_title"
-        android:textColor="@color/middle_gray"
-        android:fontFamily="@font/stolzl_book"/>
 
     <TextView
         android:id="@+id/order_date_title"
